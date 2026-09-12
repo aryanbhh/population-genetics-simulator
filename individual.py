@@ -3,5 +3,6 @@ class Individual:
         self.allele1 = allele1
         self.allele2 = allele2
 
-ind = Individual("B", "b")
-print(ind.allele1)
+if __name__ == "__main__":
+    ind = Individual("B", "b")
+    print(ind.allele1)
