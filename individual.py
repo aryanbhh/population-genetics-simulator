@@ -5,4 +5,5 @@ class Individual:
 
 if __name__ == "__main__":
     ind = Individual("B", "b")
-    print(ind.allele1)
+    print(ind.allele1) 
+    print("hello world")
