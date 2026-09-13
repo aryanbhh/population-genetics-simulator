@@ -33,7 +33,3 @@ class Population:
 
         self.individuals = new_generation
 
-pop = Population(10, 0.7)
-print(pop.allele_frequency())
-pop.reproduce()
-print(pop.allele_frequency())
