@@ -19,5 +19,21 @@ class Population:
                 count+= 1
         return count / (len(self.individuals) * 2)
 
+    def reproduce(self):
+        new_generation = []
+        for people in range(len(self.individuals)):
+            parent_1 = random.choice(self.individuals)
+            parent_2 = random.choice(self.individuals)
+
+            allele1 = random.choice([parent_1.allele1, parent_1.allele2])
+            allele2 = random.choice([parent_2.allele1, parent_2.allele2])
+
+            child = Individual(allele1, allele2)
+            new_generation.append(child)
+
+        self.individuals = new_generation
+
 pop = Population(10, 0.7)
+print(pop.allele_frequency())
+pop.reproduce()
 print(pop.allele_frequency())
